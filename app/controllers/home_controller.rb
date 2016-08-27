@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
   def index
-  end
+    @story= Story.first
+    @sentences= @story.sentences.order(:sentence_number)
+  end  
 end
