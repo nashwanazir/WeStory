@@ -1,5 +1,7 @@
-<h3>**WeStory!** </h3>
-        Create stories together, literally..
+**WeStory!**     
+
+Create stories together, literally..
+
 
  <img src="http://farm6.static.flickr.com/5220/5483593660_50363a9d31.jpg" width="150"/>
 
