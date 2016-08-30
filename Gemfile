@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim' # Cleaner html code
 gem 'bootstrap', '~> 4.0.0.alpha3' # bootstrap for styling
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

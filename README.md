@@ -12,9 +12,6 @@ others. The sentences with most votes will be added to the story. WeStory also l
 where the title with most votes will be selected for the stories. 
 
 
-**Outside Code**
-
-Bootstrap: [http://getbootstrap.com/](http://getbootstrap.com/)
 
 
 
