@@ -22,7 +22,7 @@ p
 .container-fluid
   .starter-template
     h3
-       span.westory #{ @story&.title}
+       span.westory #{@story.title} if @story.present?
     p
       - if @sentences.present?
         - @sentences.each do |sentence|
