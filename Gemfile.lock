@@ -227,7 +227,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  bootstrap (~> 4.0.0.alpha3)
+  bootstrap (~> 4.0.0.alpha3.1)
   byebug
   coffee-rails (~> 4.1.0)
   devise

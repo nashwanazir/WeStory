@@ -15,17 +15,18 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
       i Creating stories together, literally!...
          
     p 
-      a.btn.btn-primary<> href="#" Read Stories
-      a.btn.btn-primary<> href="#" Add to Story
-      a.btn.btn-primary<> href="#" Start a Story
+      a.btn.btn-primary.m-r-1.m-b-1 href="#" Read Stories
+      a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
+      a.btn.btn-primary.m-r-1.m-b-1 href="#" Start a Story
 p
 .container-fluid
   .starter-template
     h3
-       span.westory #{ @story.title}
+       span.westory #{ @story&.title}
     p
-      - @sentences.each do |sentence|
-           p #{sentence.body}
+      - if @sentences.present?
+        - @sentences.each do |sentence|
+             p #{sentence.body}
       
       
   
