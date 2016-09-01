@@ -4,3 +4,4 @@ class Sentence < ApplicationRecord
     has_many :votes
     validates :sentence_number, uniqueness: true 
 end
+
