@@ -18,7 +18,6 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Read Stories
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Start a Story
-
 p
 .carousel.slide#myCarousel data-ride="carousel"
   ol.carousel-indicators
@@ -30,17 +29,33 @@ p
       img.first-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"
       .container
         .carousel-caption.text-xs-left
-          h1 Inside Matters
+          h1
+            span.westory #{@story1.present? ? @story1.title : 'Untitled'}
+          p
+            - if @sentences1.present?
+              - @sentences1.each do |sentence|
+                 p #{sentence.body}
+      
     .carousel-item
       img.second-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"
       .container
-        .carousel-caption
-          h1 hello          
+        .carousel-caption.text-xs-left
+          h1
+            span.westory #{@story2.present? ? @story2.title : 'Untitled'}
+          p
+            - if @sentences2.present?
+              - @sentences2.each do |sentence|
+                 p #{sentence.body}  
     .carousel-item
       img.third-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"
       .container
-        .carousel-caption
-          h1 hai  
+        .carousel-caption.text-xs-left
+          h1
+            span.westory #{@story3.present? ? @story3.title : 'Untitled'}
+          p
+            - if @sentences3.present?
+              - @sentences3.each do |sentence|
+                 p #{sentence.body} 
       
   a.left.carousel-control href="#myCarousel" role="button" data-slide="prev"
     span.glyphicon.glyphicon-chevron-left aria-hidden="true"
