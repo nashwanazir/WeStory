@@ -6,6 +6,6 @@ class HomeController < ApplicationController
     @sentences2=@story2.sentences.order(:sentence_number) if @story2.present?
     @story3=Story.third
     @sentences3=@story3.sentences.order(:sentence_number) if @story3.present?
-  end  
+  end 
   
 end
