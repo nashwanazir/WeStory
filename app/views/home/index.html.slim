@@ -1,11 +1,3 @@
-nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
-  a.navbar-brand href="#" WeStory
-  ul.nav.navbar-nav
-    li.nav-item.active
-      a.nav-link href="#" Home
-    li.nav-item.active
-      a.nav-link href="#" Log in
-
 .container-fluid
   .starter-template
     h1 
@@ -17,7 +9,7 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
     p 
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Read Stories
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
-      a.btn.btn-primary.m-r-1.m-b-1 href="#" Start a Story
+      a.btn.btn-primary.m-r-1.m-b-1 href="newstory" Start a Story
 p
 .carousel.slide#myCarousel data-ride="carousel"
   ol.carousel-indicators
@@ -25,37 +17,14 @@ p
     li data-target="#myCarousel" data-slide-to="1"
     li data-target="#myCarousel" data-slide-to="2"
   .carousel-inner role="listbox"
-    .carousel-item.active
-      img.first-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"
-      .container
-        .carousel-caption.text-xs-left
-          h1
-            span.westory #{@story1.present? ? @story1.title : 'Untitled'}
-          p
-            - if @sentences1.present?
-              - @sentences1.each do |sentence|
-                 p #{sentence.body}
-      
-    .carousel-item
-      img.second-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"
-      .container
-        .carousel-caption.text-xs-left
-          h1
-            span.westory #{@story2.present? ? @story2.title : 'Untitled'}
-          p
-            - if @sentences2.present?
-              - @sentences2.each do |sentence|
-                 p #{sentence.body}  
-    .carousel-item
-      img.third-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"
-      .container
-        .carousel-caption.text-xs-left
-          h1
-            span.westory #{@story3.present? ? @story3.title : 'Untitled'}
-          p
-            - if @sentences3.present?
-              - @sentences3.each do |sentence|
-                 p #{sentence.body} 
+    -if @stories.present?
+      - @stories.each do |story|
+          .carousel-item.active
+            img.first-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"
+            .carousel-caption.text-xs-left
+              h1
+                span.westory #{story.title}
+             
       
   a.left.carousel-control href="#myCarousel" role="button" data-slide="prev"
     span.glyphicon.glyphicon-chevron-left aria-hidden="true"
