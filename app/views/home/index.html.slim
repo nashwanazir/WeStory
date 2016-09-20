@@ -1,5 +1,5 @@
 .container-fluid
-  .starter-template
+  .title-template
     h1 
       | Welcome to 
       span.westory WeStory!
@@ -9,13 +9,13 @@
     p 
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Read Stories
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
-      a.btn.btn-primary.m-r-1.m-b-1 href="/stories/new" Start a Story
+      a.btn.btn-primary.m-r-1.m-b-1 href=new_story_path Start a Story
 p
-.carousel.slide#myCarousel data-ride="carousel"
+.carousel.slide#storyCarousel data-ride="carousel"
   ol.carousel-indicators
-    li.active data-target="#myCarousel" data-slide-to="0" 
-    li data-target="#myCarousel" data-slide-to="1"
-    li data-target="#myCarousel" data-slide-to="2"
+    li.active data-target="#storyCarousel" data-slide-to="0" 
+    li data-target="#storyCarousel" data-slide-to="1"
+    li data-target="#storyCarousel" data-slide-to="2"
   .carousel-inner role="listbox"
     - if @stories.present?
       - @stories.each_with_index do |story, index|
