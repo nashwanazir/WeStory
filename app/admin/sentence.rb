@@ -18,8 +18,8 @@ ActiveAdmin.register Sentence do
     column :story
     column :user do |sentence|
       sentence.user.present? ? sentence.user.nick_name : 'No Author'  
-    actions  
     end
+    actions
   end
 
 end
