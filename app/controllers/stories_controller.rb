@@ -5,5 +5,10 @@ class StoriesController < ApplicationController
   
   def new
     @story=Story.new
+    @story.sentences.build
   end 
+  
+  def create
+  end  
+  
 end

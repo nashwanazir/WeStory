@@ -23,9 +23,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim' # Cleaner html code
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
-gem 'activeadmin', github: 'activeadmin' # backend website administration
+gem 'activeadmin', github: 'activeadmin' # Backend website administration
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise' 
+gem 'simple_form' # Simpler forms
+gem 'rubocop', '~> 0.43.0', require: false # Enforce cleaner code
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
