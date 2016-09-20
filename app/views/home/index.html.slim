@@ -9,7 +9,7 @@
     p 
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Read Stories
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
-      a.btn.btn-primary.m-r-1.m-b-1 href="newstory" Start a Story
+      a.btn.btn-primary.m-r-1.m-b-1 href="/stories/new" Start a Story
 p
 .carousel.slide#myCarousel data-ride="carousel"
   ol.carousel-indicators
@@ -17,15 +17,18 @@ p
     li data-target="#myCarousel" data-slide-to="1"
     li data-target="#myCarousel" data-slide-to="2"
   .carousel-inner role="listbox"
-    -if @stories.present?
-      - @stories.each do |story|
-          .carousel-item.active
-            img.first-slide src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"
-            .carousel-caption.text-xs-left
+    - if @stories.present?
+      - @stories.each_with_index do |story, index|
+          .carousel-item class="#{index==0 ? 'active' : ''}"
+            .carousel-caption.text
               h1
                 span.westory #{story.title}
-             
-      
+              p
+                - sentences = story.sentences.order(:sentence_number)
+                - sentences.each do |sentence|                 
+                  p
+                  |  #{sentence.body}
+  
   a.left.carousel-control href="#myCarousel" role="button" data-slide="prev"
     span.glyphicon.glyphicon-chevron-left aria-hidden="true"
     span.sr-only Previous
