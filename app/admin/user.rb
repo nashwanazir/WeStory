@@ -15,5 +15,6 @@ ActiveAdmin.register User do
   index do
     column :nick_name
     column :email
+    actions
   end  
 end

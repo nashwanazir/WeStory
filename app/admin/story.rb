@@ -14,5 +14,6 @@ ActiveAdmin.register Story do
 # end
     index do
       column :title
+      actions
     end
 end
