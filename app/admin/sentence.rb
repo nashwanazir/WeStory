@@ -1,9 +1,8 @@
 ActiveAdmin.register Sentence do
-
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :sentence_number, :story_id, :body, :user_id
+  permit_params :sentence_number, :story_id, :body, :user_id
 #
 # or
 #
@@ -17,9 +16,8 @@ ActiveAdmin.register Sentence do
     column :body
     column :story
     column :user do |sentence|
-      sentence.user.present? ? sentence.user.nick_name : 'No Author'  
+      sentence.user.present? ? sentence.user.nick_name : 'No Author'
     end
     actions
   end
-
 end
