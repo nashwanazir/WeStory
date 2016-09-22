@@ -2,4 +2,4 @@
   p
     -@stories.each do |story|
         p
-          li #{story.title}
+          li #{link_to story.title, {:action => 'show', :id => story.id}}
