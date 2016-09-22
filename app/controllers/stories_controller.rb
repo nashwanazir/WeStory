@@ -9,7 +9,7 @@ class StoriesController < ApplicationController
   end
   
   def story_params
-    params.require(:story).permit(:title, sentences_attributes: [ :id, :body ])
+    params.require(:story).permit(:title, sentences_attributes: [:id, :body])
   end
    
   def create
