@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @stories = Story.all
+    @stories = Story.limit(5)
   end
 end
