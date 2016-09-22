@@ -1,14 +1,8 @@
 h2.title-template Start a Story 
 
 .container
-  form
-	.form-group
-		label.control-label Title
-		input.form-control#title type="text" 
-	.form-group
-	  label.control-label Sentence
-	  textarea.form-control#sentence 
-	  
-	.form-group
-	button.btn.btn-primary type="submit" Create Story
-		  
+  = simple_form_for @story do |f|
+    = f.input :title
+    = f.simple_fields_for :sentences do |s|
+      = s.input :body, label: 'First Sentence', required: false
+    = f.button :submit

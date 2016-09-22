@@ -9,11 +9,11 @@ class StoriesController < ApplicationController
   end
   
   def story_params
-    params.require(:story).permit(:title, :sentences)
+    params.require(:story).permit(:title, sentences_attributes: [ :id, :body ])
   end
    
   def create
-    @story = Story.new(params[story_params])
+    @story = Story.new(story_params)
     if @story.save
       redirect_to action: 'index'
     else
