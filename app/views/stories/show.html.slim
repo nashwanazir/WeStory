@@ -1,4 +1,9 @@
 .container
+  - if flash[:success] 
+    .alert.alert-success 
+      = flash[:success]
+  
+.container      
   h1 #{@story.title}
 
   p
