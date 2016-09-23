@@ -10,10 +10,10 @@ html lang="en"
     title WeStory
     
     nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
-      a.navbar-brand href="#" WeStory
+      a.navbar-brand href=root_path WeStory
       ul.nav.navbar-nav
        li.nav-item.active
-          a.nav-link href=root_path Home
+          a.nav-link href=stories_path Stories
        li.nav-item.active
           a.nav-link href="#" Log in
     / Jaleel: This is not the ruby way of adding stylesheets. It should be using 'stylesheet_include_tag' like above. Also, you usually wont require to add a seperate boostrap css file like below when you add bootstrap as a gem. See documentation at https://github.com/twbs/bootstrap-rubygem. You will see they say to add something like '@import "bootstrap"'. Thats what you should do.
