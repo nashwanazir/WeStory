@@ -28,6 +28,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise' 
 gem 'simple_form' # Simpler forms
 gem 'rubocop', '~> 0.43.0', require: false # Enforce cleaner code
+gem 'pry', :group => :development  
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
