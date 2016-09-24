@@ -10,7 +10,7 @@
       a.btn.btn-primary.m-r-1.m-b-1 href=stories_path Read Stories
       a.btn.btn-primary.m-r-1.m-b-1 href="#" Add to Story
       a.btn.btn-primary.m-r-1.m-b-1 href=new_story_path Start a Story
-p
+
 .carousel.slide#storyCarousel data-ride="carousel"
   ol.carousel-indicators
     li.active data-target="#storyCarousel" data-slide-to="0" 
@@ -28,7 +28,7 @@ p
               p
                 - sentences = story.sentences.order(:sentence_number)
                 - sentences.each do |sentence|                 
-                  p
+                  p.text
                   |  #{sentence.body}
   
   a.left.carousel-control href="#storyCarousel" role="button" data-slide="prev"

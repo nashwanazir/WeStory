@@ -1,18 +1,24 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
 body {
   padding-top: 5rem;
-}
-.container-fluid{
-  background-color: #C0C0C0;
-}
+}  
+
 .title-template {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
 .westory{
-  color: 	#fff;
+  color: $red;
+}
+
+.btn-primary{
+  color: $white !important;
+  background-color: $primary-button-color !important;
+  border-color: $primary-button-color !important;
 }
 
 .carousel {
@@ -20,8 +26,8 @@ body {
 }
 
 .carousel-item {
-  height: 25rem;
-  background-color: #777;
+  height: 19rem;
+  background-color: $white;
 }
 .carousel-caption{
   position: absolute;
@@ -36,9 +42,22 @@ body {
   left: auto;
   width: 1rem;
   margin-left: 0;
+  border-color: $blue !important;
+}
+
+.carousel-indicators li {
+  border-color: $blue !important;
+}
+
+.carousel-indicators .active {
+  background-color:$blue !important;
 }
 
 .carousel-indicators > li {
   margin-bottom: .25rem;
+  
 }
 
+.text{
+  color: $blue !important;
+}

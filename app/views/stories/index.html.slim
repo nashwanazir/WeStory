@@ -1,5 +1,5 @@
 .container
   p
     -@stories.each do |story|
-        p
-          li #{link_to story.title, {:action => 'show', :id => story.id}}
+        p.text
+          | #{link_to story.title, {:action => 'show', :id => story.id}}

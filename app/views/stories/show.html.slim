@@ -4,12 +4,11 @@
       = flash[:success]
   
 .container      
-  h1 #{@story.title}
+  h1.westory #{@story.title}
 
   p
     - sentences = @story.sentences.order(:sentence_number)
     - sentences.each do |sentence|                 
-      p
-        |  #{sentence.body}
+      p.text #{sentence.body}
   
-  = link_to 'Back', {:action => 'index'}
+  

@@ -1,2 +1,27 @@
 @import 'bootstrap';
 @import 'home';
+@import "variables";
+
+.navbar{
+    background-color: $blue;
+}
+
+.navbar-brand{
+    color: $red;
+}
+
+.nav-link{
+    color: $red;
+}
+a:link { 
+  color: $red !important;
+}
+a:visited { 
+  color: $red !important;
+}
+a:hover { 
+   color: $grey !important;
+}
+a:active { 
+   color: $grey !important;;
+}
