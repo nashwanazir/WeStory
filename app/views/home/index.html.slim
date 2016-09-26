@@ -1,8 +1,8 @@
 .container-fluid
   .title-template
-    h1 
-      | Welcome to 
-      span.westory WeStory!
+    h1.title 
+      | We
+      span.westory Story!
     p.text-muted
       i Creating stories together, literally!...
          
@@ -24,7 +24,7 @@
           .carousel-item class="#{index==0 ? 'active' : ''}"
             .carousel-caption.text
               h1
-                span.westory #{story.title}
+                span.title #{story.title}
               p
                 - sentences = story.sentences.order(:sentence_number)
                 - sentences.each do |sentence|                 

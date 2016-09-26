@@ -2,20 +2,25 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+
 body {
   padding-top: 5rem;
 }  
 
 .title-template {
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
-.westory{
-  color: $red;
+.title {
+  color: $orange;
 }
 
-.btn-primary{
+.westory {
+  color: $black;
+}
+
+.btn-primary {
   color: $white !important;
   background-color: $primary-button-color !important;
   border-color: $primary-button-color !important;
@@ -27,9 +32,8 @@ body {
 
 .carousel-item {
   height: 19rem;
-  background-color: $white;
-}
-.carousel-caption{
+  }
+.carousel-caption {
   position: absolute;
   top: 40px;
   padding-top: 5px;
@@ -42,15 +46,14 @@ body {
   left: auto;
   width: 1rem;
   margin-left: 0;
-  border-color: $blue !important;
 }
 
 .carousel-indicators li {
-  border-color: $blue !important;
+  border-color: $black !important;
 }
 
 .carousel-indicators .active {
-  background-color:$blue !important;
+  background-color:$black !important;
 }
 
 .carousel-indicators > li {
@@ -58,6 +61,6 @@ body {
   
 }
 
-.text{
-  color: $blue !important;
+.text {
+  color: $black !important;
 }

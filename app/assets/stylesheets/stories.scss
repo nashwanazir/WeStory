@@ -1,13 +1,25 @@
-// Place all the styles related to the Stories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 
-.title-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+#stories a {
+    color: $black !important ;
 }
 
-.btn{
-  background-color: $red !important;
+#stories a:hover {
+    color: $orange !important ;
+}
+
+#stories a {
+    color: $orange !important ;
+}
+
+.container {
+    vertical-align: middle;
+}
+.card {
+    max-width: 1100px;
+}
+
+.create {
+    background-color: $orange !important;
+    color: $white;
 }

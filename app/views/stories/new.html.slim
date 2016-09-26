@@ -1,9 +1,13 @@
-h2.title-template Start a Story 
-
 .container
-  = simple_form_for @story do |f|
-    = f.input :title
-    = f.simple_fields_for :sentences do |s|
-      = s.input :body, label: 'First Sentence', required: false
-    = f.button :submit
+  .card
+    .card-header
+      h2.title-template.title Start a Story 
+  
+    .card-block
+      = simple_form_for @story do |f|
+        .card-text
+          = f.input :title
+          = f.simple_fields_for :sentences do |s|
+            = s.input :body, label: 'First Sentence', required: false
+          = f.button :submit, class: "create" 
     

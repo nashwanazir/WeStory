@@ -4,7 +4,7 @@
       = flash[:success]
   
 .container      
-  h1.westory #{@story.title}
+  h1.title #{@story.title}
 
   p
     - sentences = @story.sentences.order(:sentence_number)
