@@ -17,8 +17,27 @@ html lang="en"
       ul.nav.navbar-nav
         li.nav-item.active
           a.nav-link href=stories_path Stories
-        li.nav-item
-          a.nav-link href="#" Log in
+        - if user_signed_in?
+          li.navbar-right.nav-item
+            = link_to current_user.email, edit_user_registration_path, :class => 'navbar-link'
+          li.nav-item.active
+            a.nav-link data-method="delete" href=destroy_user_session_path Log Out
+        - else
+          li.nav-item
+            a.nav-link href=new_user_registration_path Sign Up  
+          li.nav-item
+            a.nav-link href=new_user_session_path Log in
+        
+    .container
+      - if notice
+        .alert.alert-info
+          = notice
+      end    
+      - if alert  
+        .alert.alert-warning
+          = alert
+      end  
+          
     / Jaleel: This is not the ruby way of adding stylesheets. It should be using 'stylesheet_include_tag' like above. Also, you usually wont require to add a seperate boostrap css file like below when you add bootstrap as a gem. See documentation at https://github.com/twbs/bootstrap-rubygem. You will see they say to add something like '@import "bootstrap"'. Thats what you should do.
     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous"
     

@@ -20,3 +20,11 @@
 .nav-link{
     color: $orange;
 }
+
+.nav-link:hover{
+    color: $grey;
+}
+
+.navbar-nav > li.navbar-right {
+    float: right !important;
+  }
