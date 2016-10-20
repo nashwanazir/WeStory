@@ -1,0 +1,13 @@
+.container
+  .card
+    .card-header
+      h2.title-template.title Log In 
+  
+    .card-block
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .card-text
+          = f.input :email, required: false, autofocus: true
+          = f.input :password, required: false 
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
+          = f.button :submit, "Log In", class: "create"
+      = render "devise/shared/links"        
