@@ -1,0 +1,3 @@
+= simple_form_for ([@story,@story.sentences.build]) do |f|
+    = f.input :body, label: "Add sentence", class: "control-label"
+    = f.button :submit, "Add Sentence", class: "create" 

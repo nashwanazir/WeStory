@@ -5,10 +5,12 @@
   
 .container      
   h1.title #{@story.title}
-
+  
   p
     - sentences = @story.sentences.order(:sentence_number)
     - sentences.each do |sentence|                 
       p.text #{sentence.body}
   
   
+  p
+    = link_to "Add a sentence", new_story_sentence_path(@story)

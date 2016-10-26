@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'home#index'
-  resources :stories
+  resources :stories do
+    resources :sentences
+  end  
   resources :users
   get "/log-in" => "sessions#new"
   post "/log-in" => "sessions#create"
